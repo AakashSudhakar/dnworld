@@ -4,5 +4,19 @@
 </head>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script type="text/javascript">
-  
+  // Attempting to access World Bank API data
+  $(function() {
+    $.ajax({
+      contentType: "/application/json",
+      dataType: "json",
+      crossDomain: true,
+      url: "http://api.worldbank.org/v2/datacatalog?format=json",
+      success: function() {
+        console.log("SUCCESS");
+      },
+      error: function() {
+        console.log("ERROR");
+      }
+    });
+  });
 </script>
