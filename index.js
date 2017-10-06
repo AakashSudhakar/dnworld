@@ -1,5 +1,19 @@
 // index.js (DNWorld)
 
+/*
+PRODUCT WRITE-UP: 500-1500 words (2-6 pages) on MEDIUM BLOG
+PITCH: Problem, Current Solutions, My Solution, Benefits, Demo
+POST DETAILS: What I learned, Steps that I took, Challenges, Reversals of
+Expectations/Reality
+>> Try to INFORM, PERSUADE, and ENTERTAIN in terms of NARRATIVE STRUCTURE (STORY)
+LINK the actual project (I know you'll probably forget this)
+*/
+
+/*
+v0: CRUDful resourcing (Being RESTful)
+v1: Implementing 2nd resource (API, feature)
+v2: Implementing 3rd resource (API, feature)
+*/
 // ============================================================================
 
 // var request = require("request");
@@ -12,7 +26,7 @@ var app = express();
 var Status = mongoose.model("Status", {
   subject: String,
   // This should be any amount of keywords the user inputs
-  // keywords: [ String ],
+  keywords: [ String ],
   country: String,
   city: String,
   description: String
@@ -64,7 +78,7 @@ app.get("/statuses/:id/edit", function(req, res) {
 
 // CREATE
 app.post("/statuses", function(req, res) {
-  Status.create(req.body, function(err, review) {
+  Status.create(req.body, function(err, status) {
     // console.log(Status);
 
     res.redirect("/statuses/" + status._id);
