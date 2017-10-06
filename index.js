@@ -12,7 +12,7 @@ var app = express();
 var Status = mongoose.model("Status", {
   subject: String,
   // This should be any amount of keywords the user inputs
-  keywords: [ String ],
+  // keywords: [ String ],
   country: String,
   city: String,
   description: String
@@ -47,10 +47,10 @@ app.get("/", function(req, res) {
 app.get("/statuses/new", function(req, res) {
   res.render("statuses-new", {});
 });
-/*
+
 // SHOW
 app.get("/statuses/:id", function(req, res) {
-  Status.findById(req.params.id).exec(function(err, review) {
+  Status.findById(req.params.id).exec(function(err, status) {
     res.render("statuses-show", {status: status});
   });
 });
@@ -70,7 +70,7 @@ app.post("/statuses", function(req, res) {
     res.redirect("/statuses/" + status._id);
   });
 });
-
+/*
 // UPDATE
 app.put("/statuses/:id", function(req, res) {
   Status.findByIdAndUpdate(req.params.id, req.body, function(err, review) {
