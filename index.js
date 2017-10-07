@@ -1,5 +1,7 @@
 // index.js (DNWorld)
 
+// Hi Egon and Alirie
+
 /*
 PRODUCT WRITE-UP: 500-1500 words (2-6 pages) on MEDIUM BLOG
 PITCH: Problem, Current Solutions, My Solution, Benefits, Demo
