@@ -140,6 +140,9 @@ app.put("/statuses/:id", function(req, res) {
         }
       });
     }); */
+  });
+
+})
 
 // App listening
 app.listen(3000, function() {
