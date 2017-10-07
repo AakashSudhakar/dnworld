@@ -1,7 +1,5 @@
 // index.js (DNWorld)
 
-// Hi Egon and Alirie
-
 /*
 PRODUCT WRITE-UP: 500-1500 words (2-6 pages) on MEDIUM BLOG
 PITCH: Problem, Current Solutions, My Solution, Benefits, Demo
@@ -55,8 +53,6 @@ app.use(methodOverride("_method"));
 // INDEX: Directs user to home page
 app.get("/", function(req, res) {
   Status.find(function(err, statuses) {
-    // console.log("Hello world!");
-    // res.send("Hello world!");
     res.render("statuses-index", { statuses: statuses });
   });
 });
@@ -88,14 +84,13 @@ app.post("/statuses", function(req, res) {
     res.redirect("/statuses/" + status._id);
   });
 });
-/*
+
 // UPDATE
 app.put("/statuses/:id", function(req, res) {
-  Status.findByIdAndUpdate(req.params.id, req.body, function(err, review) {
+  Status.findByIdAndUpdate(req.params.id, req.body, function(err, status) {
     res.redirect("statuses/" + status._id);
   });
 });
-*/
 
 // App listening
 app.listen(3000, function() {
