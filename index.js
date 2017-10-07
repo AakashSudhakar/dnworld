@@ -46,9 +46,9 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 
-// ============================================================================
+// ==================================================================================================================================
 
-// INDEX
+// INDEX: Directs user to home page
 app.get("/", function(req, res) {
   Status.find(function(err, statuses) {
     // console.log("Hello world!");
@@ -57,7 +57,7 @@ app.get("/", function(req, res) {
   });
 });
 
-// NEW
+// NEW: New form request
 app.get("/statuses/new", function(req, res) {
   res.render("statuses-new", {});
 });
@@ -140,9 +140,6 @@ app.put("/statuses/:id", function(req, res) {
         }
       });
     }); */
-  });
-
-})
 
 // App listening
 app.listen(3000, function() {
