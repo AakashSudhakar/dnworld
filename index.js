@@ -92,7 +92,7 @@ app.put("/statuses/:id", function(req, res) {
   });
 });
 
-// App listening
+// App listening to port 3000
 app.listen(3000, function() {
   console.log("Nomad draft listening on port 3000");
 });
