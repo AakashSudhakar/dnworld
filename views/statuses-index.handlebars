@@ -3,10 +3,14 @@
 <div class="container-fluid">
   <div class="col-sm-2"></div>
   <div class="col-sm-8">
-    <button type="button-submit" name="testButton">Click to crash!
-      <!-- <script type="text/javascript">
-        // console.log("poop");
-      </script> -->
+    <button type="button-submit" name="testButton" id="testButton">Click to crash!
+      <script type="text/javascript">
+        $(document).ready(function() {
+          $("#testButton").on("click", function() {
+            console.log("Boom! Crash!");
+          })
+        });
+      </script>
     </button>
   </div>
 </div>
