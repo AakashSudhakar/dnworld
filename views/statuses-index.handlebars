@@ -4,12 +4,21 @@
   <div>
     <h1>Welcome to the World of Digital Nomads!</h1>
     <p>This is an open community of entrepreneurs, business leaders, software developers, and designers decided to implementing their skills on a global scale.</p>
-    <form action=""></form>
-  </div>
-  <div class="col-sm-2"></div>
-  <div class="col-sm-8">
-    <button type="button-submit" name="testButton" id="testButton">Click to crash!
-      
-    </button>
+    <div id="userForm">
+      <!-- USERNAME -->
+      <div class="form-group">
+        <label for="username">What is your name?</label>
+        <input class="form-control" type="text" name="username" value="{{{user.name}}}" />
+      </div>
+
+      <!-- CAREER -->     
+      <div class="form-group">
+        <label for="country">What is your job?</label>
+        <input class="form-control" type="text" name="career" value="{{{user.career}}}" />
+      </div>
+
+      <!-- BUTTON -->
+        <button type="submit" class="btn btn-primary btn-submit" href="">Save User Info</button>
+    </div>
   </div>
 </div>

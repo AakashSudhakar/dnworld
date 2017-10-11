@@ -32,6 +32,10 @@ var Status = mongoose.model("Status", {
   city: String,
   description: String
 });
+var Country = mongoose.model("Country", {
+  country: String,
+  city: String
+});
 var bodyParser = require("body-parser");
 
 mongoose.connect("mongodb://localhost/dnworld");
@@ -56,12 +60,24 @@ app.get("/", function(req, res) {
   });
 });
 
-// NEW: New form request
+// NEW: New form request (statuses)
 app.get("/statuses/new", function(req, res) {
   res.render("statuses-new", {statuses: statuses});
 });
 
-// SHOW
+// NEW: New form request (globe)
+app.get("/globe", function(req, res) {
+  res.render("globe-new", {});
+});
+
+// SHOW (globe)
+app.get("/globe/:id", function(req, res) {
+  Country.findById(req.params.id).exec(function(err, status) {
+    res.render("globe-show", {globe: globe});
+  });
+});
+
+// SHOW (statuses)
 app.get("/statuses/:id", function(req, res) {
   Status.findById(req.params.id).exec(function(err, status) {
     res.render("statuses-show", {status: status});
@@ -78,7 +94,7 @@ app.get("/statuses/:id/edit", function(req, res) {
 // CREATE
 app.post("/statuses", function(req, res) {
   Status.create(req.body, function(err, status) {
-    // console.log(Status);
+    console.log(req.body);
 
     res.redirect("/statuses/" + status._id);
   });
