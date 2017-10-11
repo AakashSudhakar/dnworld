@@ -59,7 +59,7 @@ app.get("/", function(req, res) {
 
 // NEW: New form request
 app.get("/statuses/new", function(req, res) {
-  res.render("statuses-new", {status});
+  res.render("statuses-new", {statuses: statuses});
 });
 
 // SHOW
@@ -88,7 +88,7 @@ app.post("/statuses", function(req, res) {
 // UPDATE
 app.put("/statuses/:id", function(req, res) {
   Status.findByIdAndUpdate(req.params.id, req.body, function(err, status) {
-    res.redirect("statuses/" + status._id);
+    res.redirect("/statuses/" + status._id);
   });
 });
 
