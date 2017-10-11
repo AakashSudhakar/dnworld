@@ -94,7 +94,7 @@ app.get("/statuses/:id/edit", function(req, res) {
 // CREATE
 app.post("/statuses", function(req, res) {
   Status.create(req.body, function(err, status) {
-    console.log(req.body);
+    //console.log(req.body);
 
     res.redirect("/statuses/" + status._id);
   });
