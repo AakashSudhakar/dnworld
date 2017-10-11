@@ -22,7 +22,6 @@ var exphbs = require("express-handlebars");
 var express = require("express");
 var methodOverride = require("method-override")
 var mongoose = require("mongoose");
-var $ = require("jquery");
 var jade = require("jade");
 var app = express();
 var Status = mongoose.model("Status", {
