@@ -62,7 +62,7 @@ app.get("/", function(req, res) {
 
 // NEW: New form request (statuses)
 app.get("/statuses/new", function(req, res) {
-  res.render("statuses-new", {statuses: statuses});
+  res.render("statuses-new", { statuses: statuses});
 });
 
 // NEW: New form request (globe)
