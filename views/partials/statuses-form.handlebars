@@ -1,26 +1,29 @@
-<!-- TITLE -->
-<div class="form-group">
-  <label for="title">Title</label>
-  <input class="form-control" type="text" name="title" value="{{statuses.title}}"/>
-</div>
 
-<!-- CITY -->
-<div class="form-group">
-  <label for="city">City</label>
-  <input class="form-control" type="text" name="city" value="{{statuses.city}}" />
-</div>
+<div id="statusForm">
+  <!-- TITLE -->
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input class="form-control" type="text" name="title" value="{{statuses.title}}"/>
+  </div>
 
-<!-- COUNTRY -->
-<div class="form-group">
-  <label for="country">Country</label>
-  <input class="form-control" type="text" name="country" value="{{statuses.country}}" />
-</div>
+  <!-- CITY -->
+  <div class="form-group">
+    <label for="city">City</label>
+    <input class="form-control" type="text" name="city" value="{{statuses.city}}" />
+  </div>
 
-<!-- DESCRIPTION -->
-<div class="form-group">
-  <label for="description">Description</label>
-  <textarea class="form-control" name="description" rows="10" />{{status.description}}</textarea>
-</div>
+  <!-- COUNTRY -->
+  <div class="form-group">
+    <label for="country">Country</label>
+    <input class="form-control" type="text" name="country" value="{{statuses.country}}" />
+  </div>
 
-<!-- BUTTON -->
-<button type="submit" class="btn btn-primary">Save Status</button>
+  <!-- DESCRIPTION -->
+  <div class="form-group">
+    <label for="description">Description</label>
+    <textarea class="form-control" name="description" rows="10" />{{status.description}}</textarea>
+  </div>
+
+  <!-- BUTTON -->
+  <button type="submit" class="btn btn-primary">Save Status</button>
+</div>

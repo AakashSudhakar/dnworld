@@ -59,7 +59,7 @@ app.get("/", function(req, res) {
 
 // NEW: New form request
 app.get("/statuses/new", function(req, res) {
-  res.render("statuses-new", {});
+  res.render("statuses-new", {status});
 });
 
 // SHOW
