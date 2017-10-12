@@ -62,20 +62,20 @@ app.get("/", function(req, res) {
 
 // NEW: New form request (statuses)
 app.get("/statuses/new", function(req, res) {
-  res.render("statuses-new", { statuses: statuses});
+  res.render("statuses-new", { status: {} });
 });
 
-// NEW: New form request (globe)
-app.get("/globe", function(req, res) {
-  res.render("globe-new", {});
-});
+// // NEW: New form request (globe)
+// app.get("/globe", function(req, res) {
+//   res.render("globe-new", {});
+// });
 
-// SHOW (globe)
-app.get("/globe/:id", function(req, res) {
-  Country.findById(req.params.id).exec(function(err, status) {
-    res.render("globe-show", {globe: globe});
-  });
-});
+// // SHOW (globe)
+// app.get("/globe/:id", function(req, res) {
+//   Country.findById(req.params.id).exec(function(err, status) {
+//     res.render("globe-show", {globe: globe});
+//   });
+// });
 
 // SHOW (statuses)
 app.get("/statuses/:id", function(req, res) {

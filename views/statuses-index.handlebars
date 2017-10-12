@@ -1,30 +1,15 @@
 <!-- statuses-index.handlebars (DNworld) -->
 
-<div class="container-fluid">
-  <div>
-    <h1>Welcome to the World of Digital Nomads!</h1>
-    <p>This is an open community of entrepreneurs, business leaders, software developers, and designers decided to implementing their skills on a global scale.</p>
-    <div id="userForm">
-      <!-- USERNAME -->
-      <div class="form-group">
-        <label for="username">What is your name?</label>
-        <input class="form-control" type="text" name="username" value="{{{user.name}}}" />
-      </div>
-
-      <!-- CAREER -->     
-      <div class="form-group">
-        <label for="country">What is your job?</label>
-        <input class="form-control" type="text" name="career" value="{{{user.career}}}" />
-      </div>
-
-      <!-- LOCATION -->
-      <div class="form-group">
-        <label for="location">Where are you working?</label>
-        <input class="form-control" type="text" name="location" value="{{{user.location}}}" />
-      </div>
-
-      <!-- BUTTON -->
-        <button type="submit" class="btn btn-primary btn-submit" href="">Save User Info</button>
-    </div>
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3">
+    <h1>All Statuses</h1>
+    {{#each statuses}}
+      <a href="/statuses/{{this._id}}">
+        <h1>{{ this.subject }}</h1>
+        <h5>{{ this.city }}</h5>
+        <h4>{{ this.country }}</h4>
+        <p>{{ this.description }}</p>
+      </a>
+    {{/each}}
   </div>
 </div>

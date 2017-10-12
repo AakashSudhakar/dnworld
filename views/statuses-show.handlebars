@@ -1,14 +1,9 @@
 <a href="/">Back to Home</a>
 <div class="row">
   <div class="col-sm-6 col-sm-offset-3">
-    <h1>All Statuses</h1>
-    {{#each statuses}}
-      <a href="/statuses/{{this._id}}">
-        <h1>{{> statuses.title }}</h1>
-        <h5>{{> statuses.city }}</h5>
-        <h4>{{> statuses.country }}</h4>
-        <p>{{> statuses.description }}</p>
-      </a>
-    {{/each}}
+        <h1>{{ status.title }}</h1>
+        <h5>{{ status.city }}</h5>
+        <h4>{{ status.country }}</h4>
+        <p>{{ status.description }}</p>
   </div>
 </div>

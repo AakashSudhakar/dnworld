@@ -1,0 +1,29 @@
+v0 =========
+
+DONE show status
+DONE see statuses-index
+DONE Create status 
+Edit (verify)
+Update (verify)
+Delete 
+
+polish layout (especially footer)
+
+v1 =========
+
+Filter by city, group by city
+city-show page - see only posts about that city (with pretty background picture from the city's landscape)
+--> Use array of values for loading 
+
+add footer
+
+v2 ========= 
+
+see cities-index and sort/filter by ratings, reviews, internet speeds, etc
+Add internet speed attribute with filter
+
+
+
+FUTURE ========
+
+Interactive map (type thing)
