@@ -15,6 +15,9 @@ v1: Implementing 2nd resource (API, feature)
 v2: Implementing 3rd resource (API, feature)
 v3: Implementing 4th resource (API, feature)
 */
+
+// Side effect is modifying data that is global or doesn't have to be directly modified
+
 // ============================================================================
 
 // var request = require("request");
@@ -25,7 +28,8 @@ var mongoose = require("mongoose");
 var jade = require("jade");
 var app = express();
 var Status = mongoose.model("Status", {
-  subject: String,
+  // either change 'subject' to 'title' here to match the hb file, or change the hb reference from title to subject -L
+  subject: String, 
   // This should be any amount of keywords the user inputs
   keywords: [ String ],
   country: String,
