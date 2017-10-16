@@ -23,6 +23,7 @@ var exphbs = require("express-handlebars");
 var express = require("express");
 var methodOverride = require("method-override")
 var mongoose = require("mongoose");
+var $ = require("jquery");
 var jade = require("jade");
 var app = express();
 var Status = mongoose.model("Status", {
@@ -112,4 +113,5 @@ app.put("/statuses/:id", function(req, res) {
 // App listening to port 3000
 app.listen(3000, function() {
   console.log("Nomad draft listening on port 3000");
+  console.log(Status);
 });
