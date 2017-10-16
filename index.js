@@ -16,8 +16,6 @@ v2: Implementing 3rd resource (API, feature)
 v3: Implementing 4th resource (API, feature)
 */
 
-// Side effect is modifying data that is global or doesn't have to be directly modified
-
 // ============================================================================
 
 // var request = require("request");
