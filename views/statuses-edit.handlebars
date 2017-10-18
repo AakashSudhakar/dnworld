@@ -1,9 +1,8 @@
 <div class="row">
   <div class="col-sm-6 col-sm-offset-3">
     <legend>Edit Status</legend>
-    <form method="POST" action="/statuses?_method=PUT">
-      Edit Status!
-      {{> partials/statuses-form }}
+    <form method="POST" action="/statuses?_method=POST">
+      {{> statuses-form }}
     </form>
   </div>
 </div>

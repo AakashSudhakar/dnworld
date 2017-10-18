@@ -89,7 +89,7 @@ app.get("/statuses/:id", function(req, res) {
 
 // EDIT
 app.get("/statuses/:id/edit", function(req, res) {
-  Status.findById(reqs.params.id, function(err, status) {
+  Status.findById(req.params.id, function(err, status) {
     res.render("statuses-edit", {status: status});
   });
 });
@@ -104,7 +104,7 @@ app.post("/statuses", function(req, res) {
 });
 
 // UPDATE
-app.put("/statuses/:id", function(req, res) {
+app.post("/statuses/:id", function(req, res) {
   Status.findByIdAndUpdate(req.params.id, req.body, function(err, status) {
     res.redirect("/statuses/" + status._id);
   });
