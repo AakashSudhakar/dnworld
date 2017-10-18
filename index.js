@@ -110,6 +110,13 @@ app.post("/statuses/:id", function(req, res) {
   });
 });
 
+// DELETE
+app.delete("/statuses/:id", function(req, res) {
+  Status.findByIdAndRemove(req.params.id, function(err) {
+    res.redirect("/");
+  });
+});
+
 // App listening to port 3000
 app.listen(3000, function() {
   console.log("Nomad draft listening on port 3000");

@@ -5,7 +5,7 @@
         <h5>{{ status.city }}</h5>
         <h4>{{ status.country }}</h4>
         <p>{{ status.description }}</p>
-        <h3><a href="/statuses/{{status._id}}/edit">Edit Status</a></h3>
-        <h3><a href="/statuses/{{status._id}}/delete">Delete Status</a></h3>
+        <h3><a href="/statuses/{{status._id}}/edit"><button type="submit">Edit Status</button></a></h3>
+        <h3><form method="DELETE" action="/statuses/{{status._id}}?_method=DELETE"><button type="submit">Delete Status</button></a></h3>
   </div>
 </div>
