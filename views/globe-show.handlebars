@@ -4,9 +4,10 @@
 <div class="row">
   <div class="col-sm-6 col-sm-offset-3">
       <p id="testJSLoad">
-        <script>
+        <script>            
             var redundantLink = "http://localhost:3000/globe/"
             var globeShowId = window.location.href;
+            var checkId = cutLink(redundantLink, globeShowId)
 
             // Function that hacks off the redundant part of the link and returns the unique web address ID
             function cutLink(redundantLink, globeShowId) {
@@ -14,7 +15,9 @@
             }
 
             // Create loop that reads what the site's href is and loads the appropriate information
-            document.getElementById("testJSLoad").innerHTML = "This country is " + cutLink(redundantLink, globeShowId);
+            document.getElementById("testJSLoad").innerHTML = "This country is " + checkId + ".";
+
+            // Create loop to check what ID is against data.txt and print available data contextually
         </script>
       </p>
   </div>

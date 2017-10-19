@@ -1,0 +1,35 @@
+[
+    "usa": [
+        "city": [
+            "San Francisco": [
+                "City Population"
+            ], 
+            "Pittsburgh": [
+                "City Population"
+            ], 
+            "New York City": [
+                "City Population"
+            ]
+        ]
+    ],
+    "india": [
+        "city": [
+            "New Delhi": [
+                "City Population"
+            ], 
+            "Calcutta": [
+                "City Population"
+            ]
+        ]
+    ],
+    "china": [
+        "city": [
+            "Shanghai": [
+                "City Population"
+            ],
+            "Hong Kong": [
+                "City Population"
+            ]
+        ]
+    ]
+]
