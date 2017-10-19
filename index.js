@@ -62,6 +62,13 @@ app.get("/", function(req, res) {
   });
 });
 
+// INDEX: Directs user to globe page
+app.get("/globe/", function(req, res) {
+  Address.find(function(err, globe) {
+    res.render("globe-index", { globe: globe });
+  });
+});
+
 // NEW: New form request (statuses)
 app.get("/statuses/new", function(req, res) {
   res.render("statuses-new", { status: {} });

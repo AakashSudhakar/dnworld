@@ -1,1 +1,5 @@
 /* styles.css (DNWorld) */
+
+#statusIcon {
+    border: 1px solid rgb(0, 5, 70);
+}
