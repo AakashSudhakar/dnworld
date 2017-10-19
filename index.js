@@ -125,6 +125,7 @@ app.delete("/statuses/:id", function(req, res) {
 
 // ============================================================================
 
+// API Call Request
 app.get("api/posts", function(req, res) { // edit
   if (req.header("Content-Type") == "application/json") {
     return res.send({ }); // returns JSON // edit
