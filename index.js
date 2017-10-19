@@ -27,7 +27,6 @@ var $ = require("jquery");
 var jade = require("jade");
 var app = express();
 var Status = mongoose.model("Status", {
-  // either change 'subject' to 'title' here to match the hb file, or change the hb reference from title to subject -L
   subject: String, 
   // This should be any amount of keywords the user inputs
   keywords: [ String ],
@@ -35,7 +34,7 @@ var Status = mongoose.model("Status", {
   city: String,
   description: String
 });
-var Country = mongoose.model("Country", {
+var Address = mongoose.model("Address", {
   country: String,
   city: String
 });
@@ -87,7 +86,7 @@ app.get("/statuses/:id", function(req, res) {
   });
 });
 
-// EDIT (statuses) (broken)
+// EDIT (statuses) (BROKEN: Creates new status but doesn't edit current one)
 app.get("/statuses/:id/edit", function(req, res) {
   Status.findById(req.params.id, function(err, status) {
     res.render("statuses-edit", {status: status});
