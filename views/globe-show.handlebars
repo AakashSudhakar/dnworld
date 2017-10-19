@@ -3,7 +3,7 @@
 <a href="/globe">Back to Global Navigation</a>
 <div class="row">
   <div class="col-sm-6 col-sm-offset-3">
-      <p id="testJSLoad">
+      <p id="globalDataLoad">
         <script>            
             var redundantLink = "http://localhost:3000/globe/"
             var globeShowId = window.location.href;
@@ -15,9 +15,19 @@
             }
 
             // Create loop that reads what the site's href is and loads the appropriate information
-            document.getElementById("testJSLoad").innerHTML = "This country is " + checkCountryId + ".";
-
             // Create loop to check what ID is against data.txt and print available data contextually
+
+            // Checks if country is United States, corrects title, then loads contextual information
+            if (checkCountryId == "usa") {
+                document.getElementById("globalDataLoad").innerHTML = "This country is the United States of America.";
+            } else if (checkCountryId == "skorea") {
+                document.getElementById("globalDataLoad").innerHTML = "This country is South Korea.";
+            } else {
+                checkCountryId = checkCountryId[0].toUpperCase() + checkCountryId.slice(1, checkCountryId.length);
+
+                document.getElementById("globalDataLoad").innerHTML = `This country is ${checkCountryId}.`;
+            }
+
         </script>
       </p>
   </div>
