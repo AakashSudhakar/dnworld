@@ -2,33 +2,33 @@
     "usa": {
         "city": {
             "San Francisco": {
-                "City Population"
-            }, 
+                "City Population": 2
+            },
             "Pittsburgh": {
-                "City Population"
+                "City Population": 3
             }, 
             "New York City": {
-                "City Population"
+                "City Population": 4
             }
         }
     },
     "india": {
         "city": {
             "New Delhi": {
-                "City Population"
+                "City Population": 5
             }, 
             "Calcutta": {
-                "City Population"
+                "City Population": 6
             }
         }
     },
     "china": {
         "city": {
             "Shanghai": {
-                "City Population"
+                "City Population": 7
             },
             "Hong Kong": {
-                "City Population"
+                "City Population": 8
             }
         }
     }
