@@ -1,35 +1,35 @@
-[
-    "usa": [
-        "city": [
-            "San Francisco": [
+{
+    "usa": {
+        "city": {
+            "San Francisco": {
                 "City Population"
-            ], 
-            "Pittsburgh": [
+            }, 
+            "Pittsburgh": {
                 "City Population"
-            ], 
-            "New York City": [
+            }, 
+            "New York City": {
                 "City Population"
-            ]
-        ]
-    ],
-    "india": [
-        "city": [
-            "New Delhi": [
+            }
+        }
+    },
+    "india": {
+        "city": {
+            "New Delhi": {
                 "City Population"
-            ], 
-            "Calcutta": [
+            }, 
+            "Calcutta": {
                 "City Population"
-            ]
-        ]
-    ],
-    "china": [
-        "city": [
-            "Shanghai": [
+            }
+        }
+    },
+    "china": {
+        "city": {
+            "Shanghai": {
                 "City Population"
-            ],
-            "Hong Kong": [
+            },
+            "Hong Kong": {
                 "City Population"
-            ]
-        ]
-    ]
-]
+            }
+        }
+    }
+}
