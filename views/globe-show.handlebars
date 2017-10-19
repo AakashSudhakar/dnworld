@@ -1,14 +1,21 @@
 <!-- globe-show.handlebars -->
 
-<a href="/">Back to Home</a>
+<a href="/globe">Back to Global Navigation</a>
 <div class="row">
   <div class="col-sm-6 col-sm-offset-3">
-      <p id="testJSLoad"></p>
-      <script type="javascript">
-          var globeShowId;
+      <p id="testJSLoad">
+        <script>
+            var redundantLink = "http://localhost:3000/globe/"
+            var globeShowId = window.location.href;
 
-          // Create loop that reads what the site's href is and loads the appropriate information
-          document.getElementById("testJSLoad").innerHTML = "Page location is " + window.location.href;
-      </script>
+            // Function that hacks off the redundant part of the link and returns the unique web address ID
+            function cutLink(redundantLink, globeShowId) {
+                return globeShowId.substr(redundantLink.length, globeShowId.length);
+            }
+
+            // Create loop that reads what the site's href is and loads the appropriate information
+            document.getElementById("testJSLoad").innerHTML = "This country is " + cutLink(redundantLink, globeShowId);
+        </script>
+      </p>
   </div>
 </div>
