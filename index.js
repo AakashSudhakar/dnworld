@@ -74,22 +74,17 @@ app.get("/statuses/new", function(req, res) {
   res.render("statuses-new", { status: {} });
 });
 
-// // NEW: New form request (globe)
-// app.get("/globe", function(req, res) {
-//   res.render("globe-new", {});
-// });
-
-// // SHOW (globe)
-// app.get("/globe/:id", function(req, res) {
-//   Country.findById(req.params.id).exec(function(err, status) {
-//     res.render("globe-show", {globe: globe});
-//   });
-// });
-
 // SHOW (statuses)
 app.get("/statuses/:id", function(req, res) {
   Status.findById(req.params.id).exec(function(err, status) {
     res.render("statuses-show", {status: status});
+  });
+});
+
+// SHOW (globe)
+app.get("/globe/:id", function(req, res) {
+  Address.findById(req.params.id).exec(function(err, globe) {
+    res.render("globe-show", { globe: globe });
   });
 });
 
