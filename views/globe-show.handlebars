@@ -9,23 +9,32 @@
             var globeShowId = window.location.href;
             var checkCountryId = cutLink(redundantLink, globeShowId)
 
+            // Attempt to write a JSON request using vanilla JS
+            $.getJSON("data.json", function(data) {
+                console.log(data);
+            });
+
             // Function that hacks off the redundant part of the link and returns the unique web address ID
             function cutLink(redundantLink, globeShowId) {
                 return globeShowId.substr(redundantLink.length, globeShowId.length);
             }
 
-            // Create loop that reads what the site's href is and loads the appropriate information
-            // Create loop to check what ID is against data.txt and print available data contextually
-
             // Checks if country is United States, corrects title, then loads contextual information
             if (checkCountryId == "usa") {
                 document.getElementById("globalDataLoad").innerHTML = "This country is the United States of America.";
+
+                // Load USA information
+                
             } else if (checkCountryId == "skorea") {
                 document.getElementById("globalDataLoad").innerHTML = "This country is South Korea.";
+
+                // Load South Korea information
             } else {
                 checkCountryId = checkCountryId[0].toUpperCase() + checkCountryId.slice(1, checkCountryId.length);
 
                 document.getElementById("globalDataLoad").innerHTML = `This country is ${checkCountryId}.`;
+
+                // Create loop of IFs to load other country information
             }
 
         </script>

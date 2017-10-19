@@ -2,7 +2,9 @@
     "usa": {
         "city": {
             "San Francisco": {
-                "City Population": 2
+                "City Population": 2,
+                "numSoftwareDevs": 6,
+                "numBusinessmen": 4
             },
             "Pittsburgh": {
                 "City Population": 3

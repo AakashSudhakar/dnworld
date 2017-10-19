@@ -1,8 +1,33 @@
 /* styles.css (DNWorld) */
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
 
-#statusIcon {
+#statusDisplayColumn {
+    border: 4px solid rgb(0, 15, 30);
+    background-color: rgb(225, 250, 250);
+}
+
+#allStatusTitle {
+    font-family: "Montserrat", sans-serif;
+    padding: 10px 0px 30px 0px
+}
+
+#statusWell {
     border: 1px solid rgb(0, 5, 70);
+    background-color: rgb(140, 180, 220);
+}
+
+#previewStatusText {
+    color: black;
+}
+
+#globeIndexWell {
+    background-color: white;
+    border: 4px solid rgb(0, 15, 30)
 }
 
 #keywordSearch {
+}
+
+body {
+    background-image: url("https://www.legalnomads.com/wp-content/uploads/2015/05/Resources-for-Digital-Nomads-smaller-size.jpg")
 }

@@ -21,7 +21,7 @@ v3: Implementing 4th resource (API, feature)
 // var request = require("request");
 var exphbs = require("express-handlebars");
 var express = require("express");
-var methodOverride = require("method-override")
+var methodOverride = require("method-override");
 var mongoose = require("mongoose");
 var $ = require("jquery");
 var jade = require("jade");
@@ -105,7 +105,7 @@ app.post("/statuses", function(req, res) {
 });
 
 // UPDATE (statuses)
-app.post("/statuses/:id", function(req, res) {
+app.put("/statuses/:id", function(req, res) {
   Status.findByIdAndUpdate(req.params.id, req.body, function(err, status) {
     res.redirect("/statuses/" + status._id);
   });

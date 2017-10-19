@@ -1,15 +1,17 @@
 <!-- statuses-index.handlebars (DNworld) -->
 
 <div class="row">
-  <div class="col-sm-6 col-sm-offset-3" style="text-align: center;">
-    <h1>All Statuses</h1>
+  <div id="statusDisplayColumn" class="col-sm-6 col-sm-offset-3" style="text-align: center;">
+    <h1 id="allStatusTitle">ALL STATUSES</h1>
     {{#each statuses}}
+    <div id="statusWell" class="container-fluid well">
       <a id="statusIcon" href="/statuses/{{this._id}}">
-        <h1>{{ this.subject }}</h1>
-        <h5>{{ this.city }}</h5>
-        <h4>{{ this.country }}</h4>
-        <p>Click to view more information on {{ this.city }}.</p>
+      <h1 id="previewStatusText">{{ this.subject }}</h1>
+      <h5 id="previewStatusText">{{ this.city }}</h5>
+      <h4 id="previewStatusText">{{ this.country }}</h4>
+      <p id="previewStatusText">Click to view more information on {{ this.city }}.</p>
       </a>
+    </div>
     {{/each}}
   </div>
 </div>
