@@ -54,7 +54,7 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 
-// ==================================================================================================================================
+// ============================================================================
 
 // INDEX: Directs user to home page
 app.get("/", function(req, res) {
@@ -87,14 +87,14 @@ app.get("/statuses/:id", function(req, res) {
   });
 });
 
-// EDIT
+// EDIT (statuses) (broken)
 app.get("/statuses/:id/edit", function(req, res) {
   Status.findById(req.params.id, function(err, status) {
     res.render("statuses-edit", {status: status});
   });
 });
 
-// CREATE
+// CREATE (statuses)
 app.post("/statuses", function(req, res) {
   Status.create(req.body, function(err, status) {
     //console.log(req.body);
@@ -103,22 +103,34 @@ app.post("/statuses", function(req, res) {
   });
 });
 
-// UPDATE
+// UPDATE (statuses)
 app.post("/statuses/:id", function(req, res) {
   Status.findByIdAndUpdate(req.params.id, req.body, function(err, status) {
     res.redirect("/statuses/" + status._id);
   });
 });
 
-// DELETE
+// DELETE (statuses)
 app.delete("/statuses/:id", function(req, res) {
   Status.findByIdAndRemove(req.params.id, function(err) {
     res.redirect("/");
   });
 });
 
+// ============================================================================
+
+app.get("api/posts", function(req, res) { // edit
+  if (req.header("Content-Type") == "application/json") {
+    return res.send({ }); // returns JSON // edit
+  } else {
+    return res.render("", {}); // edit
+  }
+});
+
+// ============================================================================
+
 // App listening to port 3000
 app.listen(3000, function() {
   console.log("Nomad draft listening on port 3000");
-  console.log(Status);
+  // console.log(Status);
 });
