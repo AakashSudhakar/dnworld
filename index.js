@@ -34,7 +34,10 @@ var Status = mongoose.model("Status", {
   city: String,
   description: String
 });
-
+var Address = mongoose.model("Address", {
+  country: String,
+  city: String
+});
 var bodyParser = require("body-parser");
 var chai = require("chai");
 var chaiHttp = require("chai-http");
