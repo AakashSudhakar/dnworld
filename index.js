@@ -49,7 +49,7 @@ var assert = chai.assert;
 
 chai.use(chaiHttp);
 
-mongoose.connect("mongodb://localhost/dnworld");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/dnworld");
 
 // ============================================================================
 
@@ -141,7 +141,7 @@ app.get("api/posts", function(req, res) { // edit
 // ============================================================================
 
 // App listening to port 3000
-app.listen(3000, function() {
+app.listen(process.env.MONGODB_URI || 3000, function() {
   console.log("Nomad draft listening on port 3000");
   // console.log(Status);
 });
