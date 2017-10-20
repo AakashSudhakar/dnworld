@@ -9,7 +9,7 @@
             var globeShowId = window.location.href;
             var checkCountryId = cutLink(redundantLink, globeShowId)
             // var jsonData = $.getJSON("/data/data.json", function(json) { return json; });
-            var dataJSON = '[{"name" : "usa", "capital" : "Washington D.C."},{"name" : "india", "capital" : "New Delhi"}]';
+            var dataJSON = '[{"name" : "usa", "capital" : "Washington D.C."},{"name" : "china", "capital" : "Beijing"},{"name" : "india", "capital" : "New Delhi"}]';
             var parsedJSON = JSON.parse(dataJSON);
 
             // console.log(parsedJSON[0].name);
@@ -24,7 +24,7 @@
                 document.getElementById("globalDataLoad").innerHTML = "This country is the United States of America.";
 
                 // Load USA information
-                document.getElementById("globalDataLoad").append("");
+                document.getElementById("globalDataLoad").append(`<h2>The capital of the United States is ${parsedJSON[0].capital}.</h2>`);
             } else if (checkCountryId == "skorea") {
                 document.getElementById("globalDataLoad").innerHTML = "This country is South Korea.";
 
