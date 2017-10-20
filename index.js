@@ -78,6 +78,13 @@ app.get("/globe/", function(req, res) {
   });
 });
 
+// INDEX (FILTER): Directs user to filtered page of unique reviews based on keyword
+app.get("/statuses/filter", function(req, res) {
+  Status.find(function(err, statuses) {
+    res.render("statuses-filter", { statuses: statuses });
+  });
+});
+
 // NEW: New form request (statuses)
 app.get("/statuses/new", function(req, res) {
   res.render("statuses-new", { status: {} });
