@@ -21,10 +21,10 @@
 
             // Checks if country is United States, corrects title, then loads contextual information
             if (checkCountryId == "usa") {
-                document.getElementById("globalDataLoad").innerHTML = "This country is the United States of America.";
+                document.getElementById("globalDataLoad").innerHTML = "This country is the United States of America.\n";
 
                 // Load USA information
-                document.getElementById("globalDataLoad").append(`<h2>The capital of the United States is ${parsedJSON[0].capital}.</h2>`);
+                document.getElementById("globalDataLoad").append(`\n\nThe capital of the United States is ${parsedJSON[0].capital}`);
             } else if (checkCountryId == "skorea") {
                 document.getElementById("globalDataLoad").innerHTML = "This country is South Korea.";
 
