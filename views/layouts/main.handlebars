@@ -5,7 +5,7 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
-    <title>Nomad World</title>
+    <title>Digital Nomad World</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -17,20 +17,16 @@
   </head>
   <body>
 
-    <nav class="navbar navbar-default">
+    <nav class="container-fluid navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
           <a class="navbar-brand" href="/">Nomad World</a>
         </div>
-        <div class="form-group text-center">
-          <label for="keywordSearch">Search</label>
-          <input id="keywordSearch" class="form-control" type="text" name="keywordSearch" value="{{{status.keywords}}}"/>
+        <div class="pull-right">
+          <a id="homeHeaderButtons" class="btn btn-default navbar-btn" href="/globe">See The World</a>
         </div>
         <div class="pull-right">
-          <a class="btn btn-default navbar-btn" href="/globe">See The World</a>
-        </div>
-        <div class="pull-right">
-          <a class="btn btn-default navbar-btn" href="/statuses/new">New Status</a>
+          <a id="homeHeaderButtons" class="btn btn-default navbar-btn" href="/statuses/new">New Status</a>
           <form action=""></form>
         </div>
       </div>
@@ -42,15 +38,16 @@
     </div>
 
   </body>
-  <!--
-  <footer>
-    <nav class="navbar navbar-default">
+  <footer id="homeFooter">
+    <nav class="navbar navbar-default" style="padding 10px 0px 0px 0px;">
       <div class="container-fluid">
-        <div class="pull-right">
-          <a class="btn btn-default navbar-btn" href="https://nomadlist.com">Reference</a>
+        <div class="pull-right block">
+          <div class="form-group" style="padding: 25px 0px 0px 0px;">
+            <label for="keywordSearch">Search</label>
+            <input id="keywordSearch" class="form-control" type="text" name="keywordSearch" style="width:500px; align:center; display:inline-block;" value=""/>
+          </div>
         </div>
       </div>
     </nav>
   </footer>
-  -->
 </html>

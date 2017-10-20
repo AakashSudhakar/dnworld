@@ -1,5 +1,9 @@
 <!-- globe-show.handlebars -->
 
+<script>
+   
+</script>
+
 <a href="/globe">Back to Global Navigation</a>
 <div class="row">
   <div class="col-sm-6 col-sm-offset-3">
@@ -9,12 +13,17 @@
             var globeShowId = window.location.href;
             var checkCountryId = cutLink(redundantLink, globeShowId)
 
+            $(document).ready(function() {
+                $("#homeFooter").addClass("opaqueFull");
+            });
+
+/*
             // Attempt to write a JSON request using vanilla JS
             with open("data.json") as data_file:
                 globeDataJSON = json.load(data_file);
 
             console.log(globeDataJSON);
-
+*/
             // Function that hacks off the redundant part of the link and returns the unique web address ID
             function cutLink(redundantLink, globeShowId) {
                 return globeShowId.substr(redundantLink.length, globeShowId.length);
