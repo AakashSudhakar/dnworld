@@ -29,11 +29,18 @@ var app = express();
 var Status = mongoose.model("Status", {
   subject: String, 
   // This should be any amount of keywords the user inputs
-  keywords: [ String ],
+  keywords: String,
   country: String,
   city: String,
   description: String
 });
+var Filter = mongoose.model("Filter", {
+  subject: String,
+  keywords: String,
+  country: String,
+  city: String, 
+  description: String
+})
 var Address = mongoose.model("Address", {
   country: String,
   city: String
@@ -80,8 +87,8 @@ app.get("/globe/", function(req, res) {
 
 // INDEX (FILTER): Directs user to filtered page of unique reviews based on keyword
 app.get("/statuses/filter", function(req, res) {
-  Status.find(function(err, statuses) {
-    res.render("statuses-filter", { statuses: statuses });
+  Filter.find(function(err, filters) {
+    res.render("filters-index", { filters: filters });
   });
 });
 
