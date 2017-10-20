@@ -1,9 +1,5 @@
 <!-- globe-show.handlebars -->
 
-<script>
-   
-</script>
-
 <a href="/globe">Back to Global Navigation</a>
 <div class="row">
   <div class="col-sm-6 col-sm-offset-3">
@@ -12,18 +8,12 @@
             var redundantLink = "http://localhost:3000/globe/"
             var globeShowId = window.location.href;
             var checkCountryId = cutLink(redundantLink, globeShowId)
+            // var jsonData = $.getJSON("/data/data.json", function(json) { return json; });
+            var dataJSON = '[{"name" : "usa", "capital" : "Washington D.C."},{"name" : "india", "capital" : "New Delhi"}]';
+            var parsedJSON = JSON.parse(dataJSON);
 
-            /* $(document).ready(function() {
-                $("#homeFooter").addClass("opaqueFull");
-            }); */
+            // console.log(parsedJSON[0].name);
 
-/*
-            // Attempt to write a JSON request using vanilla JS
-            with open("data.json") as data_file:
-                globeDataJSON = json.load(data_file);
-
-            console.log(globeDataJSON);
-*/
             // Function that hacks off the redundant part of the link and returns the unique web address ID
             function cutLink(redundantLink, globeShowId) {
                 return globeShowId.substr(redundantLink.length, globeShowId.length);
@@ -34,17 +24,33 @@
                 document.getElementById("globalDataLoad").innerHTML = "This country is the United States of America.";
 
                 // Load USA information
-                
+                document.getElementById("globalDataLoad").append("");
             } else if (checkCountryId == "skorea") {
                 document.getElementById("globalDataLoad").innerHTML = "This country is South Korea.";
 
                 // Load South Korea information
+                document.getElementById("globalDataLoad").append("");
             } else {
                 checkCountryId = checkCountryId[0].toUpperCase() + checkCountryId.slice(1, checkCountryId.length);
 
                 document.getElementById("globalDataLoad").innerHTML = `This country is ${checkCountryId}.`;
 
                 // Create loop of IFs to load other country information
+                if (checkCountryId == "china") {
+                    document.getElementById("globalDataLoad").append("");
+                } else if (checkCountryId == "india") {
+                    document.getElementById("globalDataLoad").append("");
+                } else if (checkCountryId == "thailand") {
+                    document.getElementById("globalDataLoad").append("");
+                } else if (checkCountryId == "brazil") {
+                    document.getElementById("globalDataLoad").append("");
+                } else if (checkCountryId == "france") {
+                    document.getElementById("globalDataLoad").append("");
+                } else if (checkCountryId == "japan") {
+                    document.getElementById("globalDataLoad").append("");
+                } else if (checkCountryId == "russia") {
+                    document.getElementById("globalDataLoad").append("");
+                }
             }
 
         </script>

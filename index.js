@@ -39,6 +39,11 @@ var Address = mongoose.model("Address", {
   city: String
 });
 var bodyParser = require("body-parser");
+var chai = require("chai");
+var chaiHttp = require("chai-http");
+var should = chai.should();
+
+chai.use(chaiHttp);
 
 mongoose.connect("mongodb://localhost/dnworld");
 
@@ -135,4 +140,16 @@ app.get("api/posts", function(req, res) { // edit
 app.listen(3000, function() {
   console.log("Nomad draft listening on port 3000");
   // console.log(Status);
+});
+
+// Chai test to assess validity of landing page
+describe("DNWorld Landing Page", function() {
+  it("should have a live landing page", function(done) {
+    chai.request("localhost:3000")
+      .get("/")
+      .end(function(err, res){
+        res.status.should.be.equal("200");
+        done();
+      });
+  });
 });

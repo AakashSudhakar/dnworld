@@ -50,3 +50,9 @@
 .opaqueFull {
     opacity: 0;
 }
+
+#globeLocateButton {
+    padding: 10px 10px 10px 10px;
+    margin: 15px 10px 15px 10px;
+    position: relative;
+}
