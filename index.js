@@ -16,6 +16,8 @@ v2: Implementing 3rd resource (API, feature)
 v3: Implementing 4th resource (API, feature)
 */
 
+// RESTRUCTURE THE MODELS AND CONTROLLERS INTO TWO SEPARATE FILES
+
 // ============================================================================
 
 // var request = require("request");

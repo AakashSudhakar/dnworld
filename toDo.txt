@@ -3,9 +3,21 @@ v0 =========
 DONE show status
 DONE see statuses-index
 DONE Create status 
-Edit (verify)
+DONE Edit (verify)
 DONE Update (verify)
 DONE Delete 
+
+
+make controllers folder
+- add statuses controller
+- add countries controller 
+make models folder
+- status model 
+- country model
+
+Rename "globe" to country (bc counrty is a resouce, but globe is nothing)
+- globe-show => countries-index
+
 
 polish layout (especially footer)
 
