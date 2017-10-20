@@ -20,3 +20,14 @@ describe("DNWorld Landing Page", function() {
         });
     });
   });
+
+describe("DNWorld New Status Creation", function() {
+  it("should have many inputs for a new status", function(done) {
+    chai.request("localhost:3000")
+      .get("/statuses/new")
+      .end(function(err, res){
+        res.status.should.be.equal("200");
+        done();
+      })
+  })
+})
