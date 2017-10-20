@@ -7,7 +7,18 @@
     <div id="statusWell" class="container-fluid well">
       <a id="statusIcon" href="/statuses/{{this._id}}">
       <h1 id="previewStatusText">{{ this.subject }}</h1>
-      <h5 id="previewStatusText">{{ this.city }}</h5>
+      <script>
+        var keywordQuantity = 
+
+        // Check how many keywords there are and display them (if none, display message "No keywords" or hide keywordWell)
+        $(document).ready(function() {
+          if 
+        });
+      </script>
+      <div id="keywordWell" class="container-fluid well">
+        <h5 id="previewStatusText">{{ this.keywords }}</h5>
+      </div>
+      <h4 id="previewStatusText">{{ this.city }}</h5>
       <h4 id="previewStatusText">{{ this.country }}</h4>
       <p id="previewStatusText">Click to view more information on {{ this.city }}.</p>
       </a>

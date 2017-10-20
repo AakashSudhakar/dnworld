@@ -4,15 +4,16 @@
 <div class="row">
   <div class="col-sm-6 col-sm-offset-3">
       <p id="globalDataLoad">
-        <script>            
+        <script>  
             var redundantLink = "http://localhost:3000/globe/"
             var globeShowId = window.location.href;
             var checkCountryId = cutLink(redundantLink, globeShowId)
 
             // Attempt to write a JSON request using vanilla JS
-            $.getJSON("data.json", function(data) {
-                console.log(data);
-            });
+            with open("data.json") as data_file:
+                globeDataJSON = json.load(data_file);
+
+            console.log(globeDataJSON);
 
             // Function that hacks off the redundant part of the link and returns the unique web address ID
             function cutLink(redundantLink, globeShowId) {

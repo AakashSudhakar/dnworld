@@ -16,6 +16,11 @@
     background-color: rgb(140, 180, 220);
 }
 
+#newStatusWell {
+    border: 1px solid rgb(0, 5, 70);
+    background-color: rgb(140, 180, 220);
+}
+
 #previewStatusText {
     color: black;
 }
@@ -28,6 +33,6 @@
 #keywordSearch {
 }
 
-body {
-    background-image: url("https://www.legalnomads.com/wp-content/uploads/2015/05/Resources-for-Digital-Nomads-smaller-size.jpg")
+.large-background {
+    background: url("https://www.legalnomads.com/wp-content/uploads/2015/05/Resources-for-Digital-Nomads-smaller-size.jpg") no-repeat;
 }
