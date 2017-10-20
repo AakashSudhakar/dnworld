@@ -31,3 +31,14 @@ describe("DNWorld New Status Creation", function() {
       })
   })
 })
+
+describe("DNWorld Globe Access Landing Page", function() {
+  it("should have a landing page and working buttons", function(done) {
+    chai.request("localhost:3000")
+      .get("/globe")
+      .end(function(err, res){
+        res.status.should.be.equal("200");
+        done();
+      });
+  });
+});
