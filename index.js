@@ -141,8 +141,8 @@ app.get("api/posts", function(req, res) { // edit
 // ============================================================================
 
 // App listening to port 3000
-app.listen(process.env.MONGODB_URI || 3000, function() {
-  console.log("Nomad draft listening on port 3000");
+app.listen(process.env.PORT || "3000", function() {
+  console.log("Nomad draft listening on example port");
   // console.log(Status);
 });
 
