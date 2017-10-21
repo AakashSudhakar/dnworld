@@ -36,13 +36,13 @@ var Status = mongoose.model("Status", {
   city: String,
   description: String
 });
-var Filter = mongoose.model("Filter", {
-  subject: String,
-  keywords: String,
-  country: String,
-  city: String, 
-  description: String
-})
+// var Filter = mongoose.model("Filter", {
+//   subject: String,
+//   keywords: String,
+//   country: String,
+//   city: String, 
+//   description: String
+// })
 var Address = mongoose.model("Address", {
   country: String,
   city: String
@@ -162,3 +162,4 @@ app.listen(process.env.PORT || "3000", function() {
   // console.log(Status);
 });
 
+// Model.find()
